@@ -1,6 +1,6 @@
 {
   "name": "@elan-ev/reststate-vuex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library to access JSON:API data via Vuex stores",
   "main": "index.js",
   "author": ["Josh Justice <me@codingitwrong.com>"],
@@ -17,7 +17,7 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "@reststate/client": "^1.0.0"
+    "@elan-ev/reststate-client": "^1.0.0"
   },
   "peerDependencies": {
     "vuex": "^3.0.1"
