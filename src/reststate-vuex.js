@@ -422,6 +422,8 @@ const resourceModule = ({ name: resourceName, httpClient }) => {
         let relatedIds;
         if (Array.isArray(data)) {
           relatedIds = data.map(record => record.id);
+        } else if (data === null) {
+          relatedIds = null;
         } else {
           relatedIds = data.id;
         }
