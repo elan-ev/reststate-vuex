@@ -332,6 +332,13 @@ const resourceModule = ({ name: resourceName, httpClient }) => {
                 parent: getResourceIdentifier(oldRecord),
               };
 
+              // we cannot update the related resource without a type
+              // this could possibly be very bad as we cannot remove existing
+              // relationships
+              if (type === null || type === undefined) {
+                  continue;
+              }
+
               dispatch(
                 `${type}/storeRelated`,
                 {
